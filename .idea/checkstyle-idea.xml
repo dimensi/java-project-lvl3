@@ -15,7 +15,7 @@
           $PROJECT_DIR$/config/checkstyle/checkstyle.xml
           <option name="properties">
             <map>
-              <entry key="org.checkstyle.sun.suppressionfilter.config" value="" />
+              <entry key="config_loc" value="$PROJECT_DIR$/config/checkstyle" />
               <entry key="org.checkstyle.sun.suppressionxpathfilter.config" value="" />
             </map>
           </option>
