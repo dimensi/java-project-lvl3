@@ -8,7 +8,8 @@ class StringSchemaTest {
 
     @Test
     void isValid() {
-        var schema = new StringSchema();
+        Validator v = new Validator();
+        var schema = v.string();
 
         schema.required().contains("world");
 
