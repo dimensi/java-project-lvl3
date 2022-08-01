@@ -17,6 +17,7 @@ class NumberSchemaTest {
 
         assertThat(schema.isValid(null)).isFalse(); // false
         assertThat(schema.isValid(10)).isTrue(); // true
+        assertThat(schema.isValid("5")).isFalse();
 
         assertThat(schema.positive().isValid(10)).isTrue(); // true
         assertThat(schema.isValid(-10)).isFalse(); // false
