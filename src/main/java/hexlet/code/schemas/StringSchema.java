@@ -1,4 +1,4 @@
-package hexlet.code;
+package hexlet.code.schemas;
 
 import org.apache.commons.lang3.StringUtils;
 
