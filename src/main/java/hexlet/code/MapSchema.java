@@ -13,4 +13,17 @@ public final class MapSchema extends BaseSchema<Map> {
         put("sizeof", value -> value.size() == size);
         return this;
     }
+
+    public MapSchema shape(final Map<String, BaseSchema> schemaMap) {
+        put("shape", value -> {
+            for (var entry : schemaMap.entrySet()) {
+                var valueItem = value.get(entry.getKey());
+                if (!entry.getValue().isValid(valueItem)) {
+                    return false;
+                }
+            }
+            return true;
+        });
+        return this;
+    }
 }
