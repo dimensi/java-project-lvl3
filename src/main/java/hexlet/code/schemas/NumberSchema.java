@@ -17,7 +17,7 @@ public final class NumberSchema extends BaseSchema<Object> {
             if (!isInteger(value)) {
                 return false;
             }
-            return (int) value >= 0;
+            return (int) value > 0;
         });
         return this;
     }
