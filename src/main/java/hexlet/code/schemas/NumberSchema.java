@@ -24,7 +24,7 @@ public final class NumberSchema extends BaseSchema<Object> {
 
     public NumberSchema range(final int min, final int max) {
         put("range", value -> {
-            if (isInteger(value)) {
+            if (!isInteger(value)) {
                 return false;
             }
             return (int) value >= min
