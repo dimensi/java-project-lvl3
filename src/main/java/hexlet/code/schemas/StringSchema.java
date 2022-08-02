@@ -5,7 +5,7 @@ import org.apache.commons.lang3.StringUtils;
 public final class StringSchema extends BaseSchema<String> {
 
     public StringSchema required() {
-        put("required", value -> !value.isEmpty());
+        put("required", value -> value != null && !value.isEmpty());
         return this;
     }
 
@@ -16,7 +16,7 @@ public final class StringSchema extends BaseSchema<String> {
     }
 
     public StringSchema minLength(final int length) {
-        put("minLength", value -> value.length() >= length);
+        put("minLength", value -> value != null && value.length() >= length);
         return this;
     }
 }
