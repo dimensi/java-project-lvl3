@@ -10,17 +10,17 @@ public class BaseSchema<T> {
 
 
     /**
-     * Put some predicate
-     * @param name
-     * @param predicate
+     * Put some predicate.
+     * @param name - name
+     * @param predicate - predicate
      */
     void put(final String name, final Predicate<T> predicate) {
         predicateMap.put(name, predicate);
     }
     /**
-     * Put value and return boolean
-     * @param value
-     * @return
+     * Put value and return boolean.
+     * @param value - value
+     * @return boolean about value
      */
     public boolean isValid(final T value) {
         if (predicateMap.isEmpty()) {
